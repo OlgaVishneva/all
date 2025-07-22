@@ -1,0 +1,83 @@
+.intro {
+  --intro-color: var(--c-main-color);
+  --intro-primary-color: var( --c-brand-main-color);
+
+  color: var(--intro-color);
+
+  &__options {
+    padding-top: 104px;
+    margin-left: 374px;
+    max-width: 780px;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 100px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 16px;
+    padding-top: 60px;
+    margin-left: 16px;
+  }
+  }
+
+  &__title {
+    margin: 0 auto;
+    color: var(--intro-color);
+    letter-spacing: -3.7px;
+    @include font(55px, 60px);
+
+    &--primary {
+      color: var(--intro-primary-color);
+    }
+
+    @include media-breakpoint-down(md) {
+      @include font(20px, 30px);
+      letter-spacing: 0.3px;
+    }
+  }
+
+  &__text {
+    color: var(--intro-color);
+    padding-block: 88px 10px;
+    @include font(20px, 24px, 700);
+
+    @include media-breakpoint-down(md) {
+      padding-block: 30px 10px;
+      @include font(14px, 18px);
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 2px;
+    @include font(20px, 24px);
+
+    &::before {
+    content: "-";
+    position: absolute;
+    left: 10px;
+    color: black;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-block: 80px 20px;
+
+    @include media-breakpoint-down(md) {
+      padding-block: 30px 10px;
+      gap: 16px;
+    }
+  }
+
+  &__control {
+    display: flex;
+    gap: 18px;
+    max-width: 183px;
+    @include font(14px, 17px);
+  }
+}
+

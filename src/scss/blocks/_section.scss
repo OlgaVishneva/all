@@ -1,0 +1,26 @@
+.section {
+  --section-bg-color: var(--c-main-primary-color);
+  --section-bg-primary-color: var(--c-main-secondary-emphasis-color);
+
+  background-color: var(--section-bg-color);
+  @include font(12px, 20px,400);
+
+
+  &--bg-pic {
+    background: var(--section-bg-color) url('/img/header-bg/header-bg.webp') no-repeat top / cover;
+    height: 850px;
+
+
+    @include media-breakpoint-down(md) {
+      height: 740px;
+    }
+  }
+
+  &--primary {
+    background-color: var(--section-bg-primary-color);
+  }
+
+  &--bg-pic-map {
+background: var(--section-bg-primary-color) url('/img/section-bg/section-bg.webp') no-repeat center center / cover;
+  }
+}
