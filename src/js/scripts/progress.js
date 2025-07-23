@@ -6,22 +6,24 @@ export default function progress() {
     let isDragging = false;
 
     function moveSlider(newX) {
-        // Ограничение перемещения по полоске
+        // Получаем размеры слайдера
         const sliderRect = sliderRange.getBoundingClientRect();
+        
+        // Ограничиваем новое значение в пределах слайдера
         if (newX < 0) newX = 0;
         if (newX > sliderRect.width) newX = sliderRect.width;
 
-        // Изменение позиции шарика
+        // Изменяем позицию шарика
         sliderBall.style.left = newX + 'px';
 
-        // Вычисление процентного значения
+        // Вычисляем процент
         const percentage = Math.round((newX / sliderRect.width) * 100);
         percentageText.textContent = percentage + '%';
 
-        // Вычисление позиции процентов, чтобы они были центром шарика
+        // Обновляем позицию текста процента, чтобы он был центром шарика
         const percentagePosition = newX - (percentageText.offsetWidth / 2);
 
-        // Ограничение позиции процентов в пределах полоски
+        // Ограничиваем позицию текста в пределах слайдера
         if (percentagePosition < 0) {
             percentageText.style.right = '0px';
         } else if (percentagePosition + percentageText.offsetWidth > sliderRect.width) {
@@ -29,6 +31,7 @@ export default function progress() {
         }
     }
 
+    // Обработчик мыши для PC
     sliderBall.addEventListener('mousedown', function () {
         isDragging = true;
     });
@@ -44,9 +47,11 @@ export default function progress() {
         isDragging = false;
     });
 
-    // Добавление поддержки для тачскринов
-    sliderBall.addEventListener('touchstart', function () {
-        isDragging = true;
+    // Добавление поддержки для тач-устройств (включая iOS)
+    sliderBall.addEventListener('touchstart', function (e) {
+        isDragging = true; 
+        // Предотвращение прокрутки страницы во время касания
+        e.preventDefault();
     });
 
     document.addEventListener('touchmove', function (e) {
