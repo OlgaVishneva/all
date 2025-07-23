@@ -31,9 +31,13 @@ export default defineConfig({
     assetsInlineLimit: 0
   },
   server: {
-    host: '0.0.0.0',
-    port: process.env.EXPOSE_PORT,
-    hmr: true
+    proxy: {
+      '/api': {
+        target: 'http://external-api.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   preview: {
     host: '0.0.0.0',

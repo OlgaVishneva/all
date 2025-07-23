@@ -36,8 +36,11 @@
     "swiper": "^8.4.5"
   },
   "version": "1.0.0",
-  "description": "> https://sova-frontend-test.itcomp.tech/",
   "main": "vite.config.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }
