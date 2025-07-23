@@ -12,7 +12,11 @@
 
 
     @include media-breakpoint-down(md) {
-      height: 740px;
+      height: 468px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 570px;
     }
   }
 

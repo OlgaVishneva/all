@@ -167,6 +167,7 @@
 
   @include media-breakpoint-down(md) {
     margin-top: calc(100px + 50px);
+    max-width: none;
   }
 }
 
