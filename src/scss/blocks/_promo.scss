@@ -17,6 +17,10 @@
       padding-block: 80px 100px;
     }
 
+    @include media-breakpoint-down(xs) {
+      padding-block: 64px 80px;
+    }
+
   &__title {
     color: var(--promo-color);
     @include font(36px, 44px, 800);
@@ -27,7 +31,7 @@
 
 
     @include media-breakpoint-down(md) {
-      @include font(30px, 40px, 800);
+      @include font(24px, 30px, 800);
     }
   }
 
