@@ -1,10 +1,32 @@
 import '../scss/main.scss';
-import dropdown from './scripts/dropdown.js';
-import openMenu from './scripts/openMenu.js';
-import progress from './scripts/progress.js';
-import scroll from './scripts/scroll.js';
+import circleClick from './scripts/circleClick.js';
+import colorPaper from './scripts/colorPaper.js';
+import content from './scripts/content.js';
+import setImg from './scripts/setImg.js';
 
-dropdown();
-openMenu();
-progress();
-scroll()
+content();
+circleClick();
+colorPaper();
+setImg();
+
+const video = document.getElementById('promoVideo');
+
+    function updateVideoSource() {
+        const mobileSource = document.getElementById('mobileSource').src;
+        const desktopSource = document.getElementById('desktopSource').src;
+
+        if (window.innerWidth <= 767) {
+            video.src = mobileSource;
+        } else {
+            video.src = desktopSource;
+        }
+
+        // Поскольку мы меняем источник видео, необходимо перезагрузить его
+        video.load();
+    }
+
+    // Обновляем источник при загрузке страницы
+    window.addEventListener('load', updateVideoSource);
+
+    // Обновляем источник при изменении размера окна
+    window.addEventListener('resize', updateVideoSource);

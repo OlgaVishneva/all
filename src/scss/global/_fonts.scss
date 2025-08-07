@@ -1,44 +1,22 @@
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lato');
+  src: local('Roboto');
   src:
-    url('/fonts/lato/Lato-Regular.woff2') format('woff2'),
-    url('/fonts/lato/Lato-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Lato');
-  src:
-    url('/fonts/lato/Lato-Semibold.woff2') format('woff2'),
-    url('/fonts/lato/Lato-Semibold.woff') format('woff');
+    url('/fonts/roboto/roboto-400.woff2') format('woff2'),
+    url('/fonts/roboto/roboto-400.woff') format('woff');
 }
 
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Tenor Sans';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: local('Lato');
+  src: local('Tenor Sans');
   src:
-    url('/fonts/lato/Lato-Bold.woff2') format('woff2'),
-    url('/fonts/lato/Lato-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: local('Lato');
-  src:
-    url('/fonts/lato/Lato-800.woff2') format('woff2'),
-    url('/fonts/lato/Lato-800.woff') format('woff');
+    url('/fonts/tenorSans/TenorSans-Regular.woff2') format('woff2'),
+    url('/fonts/tenorSans/TenorSans-Regular.woff') format('woff');
 }

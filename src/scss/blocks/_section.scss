@@ -1,30 +1,16 @@
 .section {
-  --section-bg-color: var(--c-main-primary-color);
-  --section-bg-primary-color: var(--c-main-secondary-emphasis-color);
+  --section-bg-color: var(--c-base-primary-color);
+  --section-indent: 38px;
+
+  @include media-breakpoint-up(md) {
+    padding-block: 50px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-block: 82px;
+  }
 
   background-color: var(--section-bg-color);
-  @include font(12px, 20px,400);
-
-
-  &--bg-pic {
-    background: var(--section-bg-color) url('/img/header-bg/header-bg.webp') no-repeat top / cover;
-    height: 850px;
-
-
-    @include media-breakpoint-down(md) {
-      height: 468px;
-    }
-
-    @include media-breakpoint-down(md) {
-      height: 570px;
-    }
-  }
-
-  &--primary {
-    background-color: var(--section-bg-primary-color);
-  }
-
-  &--bg-pic-map {
-background: var(--section-bg-primary-color) url('/img/section-bg/section-bg.webp') no-repeat center center / cover;
-  }
+  padding-block: var(--section-indent);
+  @include font(12px, 20px);
 }
